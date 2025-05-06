@@ -16,18 +16,18 @@ Este manual explica como configurar o Apache Airflow para orquestrar jobs no Dat
 
 1. Acesse o Databricks Workspace.
 2. No canto superior direito, clique em **Settings**.<br>
-![](.\img\01.png)
+![](https://github.com/Adrianogvs/airflow-databricks-orchestration/blob/main/img/01.png)
 
 4. Vá para `User Settings → Developer → Access Tokens`.<br>
-![](.\img\02.png)
+![](https://github.com/Adrianogvs/airflow-databricks-orchestration/blob/main/img/02.png)
 
 5. Clique em **Generate New Token**.<br>
-![](.\img\03.png)
+![](https://github.com/Adrianogvs/airflow-databricks-orchestration/blob/main/img/03.png)
 
 6. Adicione uma descrição (ex: `Airflow Integration`) e defina um tempo de expiração.
 
 7. Clique em **Generate** e **copie o token** (ele não será exibido novamente).<br>
-![](.\img\04.png)
+![](https://github.com/Adrianogvs/airflow-databricks-orchestration/blob/main/img/04.png)
 
 8. Salve o token em um local seguro (será usado no Airflow).
 
@@ -53,16 +53,16 @@ airflow scheduler --start
 ```
 ## 🧩 Passo alternativo - Instalação do Provedor de Conexão do Databricks no Airflow
 
-1. Vá no Docker e configure estes tres objetos conforme demostrado na imagem abaixo:<br>
-![](.\img\05.png)
+1. Configure os containers no Docker. Ajuste os três objetos conforme a imagem abaixo:<br>
+![](https://github.com/Adrianogvs/airflow-databricks-orchestration/blob/main/img/05.png)
 
-2. Clique nos tres pontinhos e seleciona a opção **Open in terminal**. <br>
-![](.\img\06.png)
+2. Clique nos tres pontinhos e selecione a opção **Open in terminal**. <br>
+![](https://github.com/Adrianogvs/airflow-databricks-orchestration/blob/main/img/06.png)
 
 3. Irá abrir o terminal do Docker, cole o código ```ip install apache-airflow-providers-databricks``` e logo após pressione **Enter**.<br>
-![](.\img\08.png)
+![](https://github.com/Adrianogvs/airflow-databricks-orchestration/blob/main/img/08.png)
 
-4. Faça esse mesmo processo para os outros dois objetos.<br>
+4. Repita o processo para os demais containers.<br>
    II. airflow-worker-1<br>
    III. airflow-scheduler-1
 ---
@@ -72,10 +72,10 @@ airflow scheduler --start
 1. Acesse a interface do Airflow (ex: `http://localhost:8080`).
 
 2. Vá em **Admin → Connections**.<br>
-![](.\img\10.png)
+![](https://github.com/Adrianogvs/airflow-databricks-orchestration/blob/main/img/10.png)
 
 3. Clique em **+ (Adicionar Nova Conexão)**.<br>
-![](.\img\11.png)
+![](https://github.com/Adrianogvs/airflow-databricks-orchestration/blob/main/img/11.png)
 
 4. Preencha os campos:
 
@@ -84,7 +84,7 @@ airflow scheduler --start
    * **Host**: URL do seu workspace Databricks (ex: `https://<seu-workspace>.cloud.databricks.com`).
    * **Password**: Cole o PAT (Token de Acesso) gerado no Passo 1.<br>
    
-    ![](.\img\14.png)
+    ![](https://github.com/Adrianogvs/airflow-databricks-orchestration/blob/main/img/14.png)
 
 5. Clique em **Save**.
 
@@ -129,7 +129,7 @@ with DAG('databricks_dag',
 3. Localize o DAG `ddatabricks_dag` e ative-o.
 4. Execute manualmente clicando em **Trigger DAG**.
 5. Verifique o status no Databricks (Jobs → Runs).<br>
-![](.\img\15.png)
+![](https://github.com/Adrianogvs/airflow-databricks-orchestration/blob/main/img/15.png)
 
 ---
 
@@ -171,6 +171,3 @@ Agora o Airflow está configurado para orquestrar jobs no Databricks, seja manua
 * Configurar alertas de falhas no Airflow.
 
 Espero que este manual seja útil! 🚀
-
-
-[def]: D:\Documents\GitHub\project-with-airflow-docker\img\01.png
