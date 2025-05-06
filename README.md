@@ -15,8 +15,8 @@ Este manual explica como configurar o Apache Airflow para orquestrar jobs no Dat
 ## 🧩 Passo 1: Gerar um Token de Acesso (PAT) no Databricks
 
 1. Acesse o Databricks Workspace.
-2. No canto superior direito, clique em **Settings**.<br>
-   <img src="https://github.com/Adrianogvs/airflow-databricks-orchestration/blob/main/img/01.png" alt="Settings" style="float: left; margin-right: 10px;" width="300">
+2. No canto superior direito, clique em **Settings**.
+
 4. Vá para `User Settings → Developer → Access Tokens`.
 5. Clique em **Generate New Token**.
 6. Adicione uma descrição (ex: `Airflow Integration`) e defina um tempo de expiração.
