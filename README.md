@@ -51,7 +51,7 @@ airflow scheduler --stop
 airflow webserver --start  
 airflow scheduler --start  
 ```
-## 🧩 Passo alternativo - Instalação do Provedor de Conexão do Databricks no Airflow
+### Passo alternativo - Instalação do Provedor de Conexão do Databricks no Airflow
 
 1. Configure os containers no Docker. Ajuste os três objetos conforme a imagem abaixo:<br>
 ![](https://github.com/Adrianogvs/airflow-databricks-orchestration/blob/main/img/05.png)
