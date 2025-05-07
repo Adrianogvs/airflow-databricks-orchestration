@@ -65,6 +65,15 @@ airflow scheduler --start
 4. Repita o processo para os demais containers.<br>
    II. airflow-worker-1<br>
    III. airflow-scheduler-1
+
+5. Após a instalação, reinicie os serviços do Airflow:
+
+```bash
+airflow webserver --stop  
+airflow scheduler --stop  
+airflow webserver --start  
+airflow scheduler --start  
+```
 ---
 
 ## 🧩 Passo 3: Configurar a Conexão do Airflow com o Databricks
