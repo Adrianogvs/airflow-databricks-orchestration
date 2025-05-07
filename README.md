@@ -117,7 +117,6 @@ with DAG('databricks_dag',
         job_id = <ID_TOKENS_ACCESS> # Access tokens gerado no Databricks 
     )
 
-    submit_job
 ```
 
 ---
